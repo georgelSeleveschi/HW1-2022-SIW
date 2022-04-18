@@ -17,9 +17,9 @@ public class Allievo {
     private String Luogo_Nascita;
 	private String email;
 	
-	@ManyToMany(mappedBy="allievi")
+	@ManyToMany(mappedBy="allievi",fetch=FetchType.LAZY)
 	private List<Corso> corsi;
 	
-	@ManyToOne
+	@ManyToOne(fetch=FetchType.EAGER)
 	private Azienda azienda;
 }

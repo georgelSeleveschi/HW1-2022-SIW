@@ -14,10 +14,10 @@ public class Corso {
 	private LocalDate Data_Inizio;
 	private int durata;
 	
-	@ManyToMany
+	@ManyToMany(fetch=FetchType.LAZY)
 	private List<Allievo> allievi;
 	
-	@ManyToOne
+	@ManyToOne(fetch=FetchType.EAGER)
 	private Docente docente;
 
 }
