@@ -16,6 +16,7 @@ public class Docente {
 	@Column(nullable=false)
 	private String partita_iva;
 	
-	@OneToMany(mappedBy="docente")
+	@OneToMany(mappedBy="docente" ,fetch=FetchType.EAGER)
 	private List<Corso> corsi; 
+	
 }
