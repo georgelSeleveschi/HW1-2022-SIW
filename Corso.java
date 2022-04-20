@@ -17,7 +17,7 @@ public class Corso {
 	@ManyToMany(fetch=FetchType.LAZY)
 	private List<Allievo> allievi;
 	
-	@ManyToOne(fetch=FetchType.EAGER)
+	@ManyToOne(fetch=FetchType.EAGER,cascade= {CascadeType.PERSIST})
 	private Docente docente;
 
 }
